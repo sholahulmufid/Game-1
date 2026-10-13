@@ -58,6 +58,8 @@ Alamat produksi sudah lolos 9 pemeriksaan HTTP dengan dua identitas pemain: hala
 
 ## Source hosting
 
+Folder **online/** adalah repository Sites terpisah dan diabaikan oleh repository GitHub/Netlify. Folder **server/** berisi layanan room dan migrasi untuk preview lokal serta tes, sehingga clone GitHub tidak memerlukan submodule. Sebelum menjalankan sinkronisasi Sites pada clone baru, pulihkan checkout Sites ke **online/**. Perubahan layanan room dipelihara di **server/rooms.mjs** dan ikut disalin oleh skrip sinkronisasi; migrasi baru dari Sites perlu disertakan ke **server/migrations/** untuk preview lokal.
+
 Source Sites berada di **online/**. Perbarui frontend utama, jalankan `node scripts/sync-online.mjs`, lalu build source hosting. Manifest `.openai/hosting.json` menyimpan identitas Site dan binding database; `online/db/schema.ts` serta `online/drizzle/` menyimpan migrasi schema. Folder **dist/** utama adalah keluaran frontend statis; room hosting memerlukan server dari **online/**, bukan hanya upload frontend ke static hosting.
 
 ## Berkas utama

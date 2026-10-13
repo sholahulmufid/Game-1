@@ -6,3 +6,5 @@ test-results/
 *.log
 .connected/
 connected-online.tar.gz
+# Sites has its own source repository; do not add it as a Git submodule.
+/online/

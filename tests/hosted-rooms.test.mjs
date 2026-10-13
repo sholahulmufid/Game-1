@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
-import { handleRoomRequest } from '../online/lib/rooms.mjs';
+import { handleRoomRequest } from '../server/rooms.mjs';
 import { World } from '../physics.js';
 
 // SQLite executes the same SQL as D1, including unique constraints and atomic

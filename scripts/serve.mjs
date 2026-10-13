@@ -2,7 +2,7 @@ import http from 'node:http';
 import {readFile} from 'node:fs/promises';
 import path from 'node:path';
 import {localRoomDatabase} from './d1-local.mjs';
-import {handleRoomRequest} from '../online/lib/rooms.mjs';
+import {handleRoomRequest} from '../server/rooms.mjs';
 const roomDatabase=await localRoomDatabase();
 const root = process.cwd(), port = Number(process.env.PORT || process.argv[2] || 4175);
 const publicFiles = new Set(['index.html','style.css','app.js','game.js','physics.js','renderer.js','levels.js','multiplayer.js','hosted-multiplayer.js','audio.js','config.js']);

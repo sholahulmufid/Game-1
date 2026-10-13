@@ -10,6 +10,8 @@ Konfigurasi saat ini memindahkan website ke Netlify dan mempertahankan server ro
 4. Publish directory: dist.
 5. Deploy. netlify.toml sudah menyertakan proxy /api/room ke server yang aktif.
 
+Folder online/ merupakan checkout Sites terpisah, bukan submodule GitHub. Repository Netlify mengabaikan folder tersebut; server/ menyimpan layanan room dan migrasi yang dibutuhkan untuk menjalankan serta menguji game secara lokal. Jika log menyebut "No url found for submodule path 'online'", pastikan commit perbaikan yang menghapus pencatatan gitlink online sudah masuk ke branch main, lalu Retry deploy.
+
 ## Upload manual
 
 Jalankan npm run build lalu upload folder dist melalui Netlify Drop. File dist/_redirects memuat proxy room, sehingga mode online tidak hilang pada upload statis.

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {HostedMultiplayer} from '../hosted-multiplayer.js';
-import {handleRoomRequest} from '../online/lib/rooms.mjs';
+import {handleRoomRequest} from '../server/rooms.mjs';
 import {localRoomDatabase} from '../scripts/d1-local.mjs';
 import {World} from '../physics.js';
 
