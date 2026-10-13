@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.env.*
+test-results/
+*.log
+.connected/
+connected-online.tar.gz
